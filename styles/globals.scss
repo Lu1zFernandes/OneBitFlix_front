@@ -7,20 +7,18 @@
 main {
   background-color: #151515;
   min-height: 100vh;
-  color: #ffffff;
+  color: white;
+
   p {
     margin: 0;
   }
 }
-
 ::-webkit-scrollbar {
   width: 8px;
 }
-
 ::-webkit-scrollbar-track {
   background: #151515;
 }
-
 ::-webkit-scrollbar-thumb {
   background: #868686;
   border-radius: 40px;
