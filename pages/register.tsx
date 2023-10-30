@@ -59,7 +59,7 @@ const Register = function () {
         <HeaderGeneric
           logoUrl="/"
           btnUrl="/login"
-          btnContent="Quero fazer parte"
+          btnContent="Quero fazer login"
         />
         <Container className="py-5">
           <p className={styles.formTitle}>
