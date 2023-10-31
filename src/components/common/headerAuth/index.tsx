@@ -26,7 +26,7 @@ const HeaderAuth = function () {
   return (
     <>
       <Container className={styles.nav}>
-        <Link href="/home">
+        <Link href="/">
           <img
             src="/logoOnebitflix.svg"
             alt="logoOnebitflix"
