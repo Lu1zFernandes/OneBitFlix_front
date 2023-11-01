@@ -1,3 +1,4 @@
+import Footer from "@/components/common/footer";
 import FavoritesCourses from "@/components/homeAuth/favoriteCategory";
 import FeaturedCategory from "@/components/homeAuth/featuredCategory";
 import FeaturedSection from "@/components/homeAuth/featuredSection";
@@ -18,6 +19,7 @@ const HomeAuth = function () {
         <FavoritesCourses />
         <FeaturedCategory />
         <ListCategories />
+        <Footer />
       </main>
     </>
   );
