@@ -95,6 +95,8 @@
   font-weight: bold;
   font-size: 15px;
   transition: 0.4s;
+  display: block;
+  margin: 10px auto;
   padding: 6px 20px;
   &:hover {
     border-color: $darkRed;
@@ -115,10 +117,18 @@
   font-weight: bold;
   margin: 0 auto;
   padding: 14px 0px;
+  transition: 0.3s;
   &:hover {
     background-color: transparent;
-    border-color: $lightRed;
-    color: $lightGray;
+    border-color: $lightGray;
+  }
+  &:active {
+    background-color: transparent;
+    box-shadow: none;
+  }
+  &:focus {
+    background-color: transparent;
+    box-shadow: none;
   }
 }
 
