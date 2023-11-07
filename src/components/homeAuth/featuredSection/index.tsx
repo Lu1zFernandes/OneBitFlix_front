@@ -33,7 +33,7 @@ const FeaturedSection = function () {
               <p className={styles.title}>{course.name}</p>
               <p className={styles.description}>{course.synopsis}</p>
               <Link
-                href={`/courses/${course.id}`}
+                href={`/course/${course.id}`}
                 className={styles.buttonDecoration}
               >
                 <Button outline color="light" className={styles.button}>
