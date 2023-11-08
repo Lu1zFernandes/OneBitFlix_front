@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @next/next/no-img-element */
 import HeaderAuth from "@/components/common/headerAuth";
 import styles from "../../styles/coursePage.module.scss";
@@ -14,6 +15,7 @@ const CoursePage = function () {
   const [course, setCourse] = useState<CourseType>();
   const [liked, setLiked] = useState(false);
   const [favorited, setFavorited] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   const router = useRouter();
   const { id } = router.query;
@@ -34,6 +36,16 @@ const CoursePage = function () {
     getCourse();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id]);
+
+  useEffect(() => {
+    if (!sessionStorage.getItem("onebitflix-token")) {
+      router.push("/login");
+    } else {
+      setLoading(false);
+    }
+  }, []);
+
+  if (loading) return <PageSpinner />;
 
   const handleLikeCourse = async () => {
     if (typeof id !== "string") return;
