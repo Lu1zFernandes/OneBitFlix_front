@@ -25,7 +25,11 @@ const EpisodeList = function ({ episode, course }: props) {
   };
 
   const handleEpisodePlayer = () => {
-    router.push(`/course/episode/${episode.order - 1}?courseid=${course.id}`);
+    router.push(
+      `/course/episode/${episode.order - 1}?courseid=${course.id}&episodeid=${
+        episode.id
+      }`
+    );
   };
 
   return (
@@ -39,18 +43,7 @@ const EpisodeList = function ({ episode, course }: props) {
         </div>
         <div className={styles.episodeTitleDescription}>
           <p className={styles.episodeTitle}>{episode.name}</p>
-          <p className={styles.episodeDescription}>
-            {episode.synopsis} AAAA Lorem ipsum dolor sit amet, consectetur
-            adipisicing elit. Voluptatum, facilis inventore adipisci velit
-            numquam, fugit dolores expedita quis veniam in vitae sapiente
-            tempore suscipit explicabo animi molestias quidem perspiciatis
-            quibusdam voluptas repellat maiores amet tempora! Sint beatae
-            excepturi sed officiis, voluptatem harum a voluptate dolorum minus
-            officia corrupti temporibus enim!
-            <br />
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex,
-            maiores.
-          </p>
+          <p className={styles.episodeDescription}>{episode.synopsis}</p>
         </div>
       </div>
     </>
